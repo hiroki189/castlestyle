@@ -1,3 +1,55 @@
-// Place all the styles related to the castle controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.banner{
+  width: 900px;
+  margin: 0 auto;
+  position: relative;
+  &__logo{
+    float: left;
+    padding: 10px 0;
+    text-align: center;
+    &_name{
+      text-decoration: none;
+      font-style: oblique;
+      font-size: 35px;
+      color: brown;
+    }
+  }
+  &__search{
+    position: absolute;
+    top: 23px;
+    left: 284px;
+    float: left;
+    text-align: center;
+    &__form{
+      position: absolute;
+      top: 23px;
+      left: 284px;
+      float: left;
+      text-align: center;
+      &__field{
+        position: relative;
+        background: #fafafa;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        width: 490px;
+        margin: 0;
+        &_input{
+          width: 490px;
+          height: 34px;
+          line-height: 24px;
+          font-size: 16px;
+        }
+        &__submit{
+          position: absolute;
+          top: 0;
+          right: 0;
+          &__global{
+            display: block;
+            padding: 0;
+            width: 34px;
+            height: 34px;
+          }
+        }
+      }
+    }
+  }
+}
