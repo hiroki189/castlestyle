@@ -1,7 +1,7 @@
 %header
   .banner
     .banner__logo
-      = image_tag "城の無料アイコンその2",size: "50x50"
+      = image_tag "城の無料アイコンその2",size: "40x40"
       = link_to "castlestyle", "/", class: "banner__logo_name"
     .banner__search
       %form{action: "", method: "POST",class: "banner__search__form"}
@@ -11,4 +11,26 @@
           %dd.banner__search__form__field__submit
             %button{type: "submit", class: "banner__search__form__field__submit__global"}
               %span.banner__search__form__field__submit__global_field
-                %i.
+                %i.fas.fa-search
+    .banner__menu
+      %ul.banner__menu__container
+        %li
+          = link_to "TOP", "/"
+        %li
+          = link_to "Q&A",""
+        %li
+          = link_to "西日本の城", ""
+        %li
+          = link_to "東日本の城", ""
+        %li
+          = link_to "城ランキング", ""
+        %li
+          = link_to "城スタイル投稿", ""
+
+    .banner__login
+      = link_to "ログイン", "", class: "banner__login_in"
+    
+%div.home
+  %ul.home__wide
+    %li.home__wide__large
+      = link_to "", "home__wide__large_article"
