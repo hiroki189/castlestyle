@@ -13,10 +13,8 @@
       color: brown;
     }
   }
+
   &__search{
-    position: absolute;
-    top: 23px;
-    left: 284px;
     float: left;
     text-align: center;
     &__form{
@@ -37,19 +35,69 @@
           height: 34px;
           line-height: 24px;
           font-size: 16px;
+          padding: 0 6px 0 6px;
+          border: none;
+          background: none;
+        }
+        .banner__search__form__field_input:focus{
+          outline: 0;
         }
         &__submit{
           position: absolute;
           top: 0;
           right: 0;
+          background: 0;
+          border: 0;
           &__global{
             display: block;
             padding: 0;
             width: 34px;
             height: 34px;
+            background: none;
+            border: none;
+            &_field{
+              font-size: 15px;
+            }
           }
         }
       }
+    }
+  }
+  &__menu{
+    &__container{
+      float: left;
+      padding: 0;
+      height: 60px;
+      width: 950px;
+      margin-left: 0px;
+      margin-top: -20px;
+      li{
+        display: inline-block;
+        height: 100%;
+        list-style: none;
+        float: left;
+        a{
+          display: inline-block;
+          height: 60px;
+          line-height: 60px;
+          text-decoration: none;
+          font-size: 14px;
+          margin-right: 24px;
+          color: black;
+        }
+      }
+    }
+  }
+  &__login{
+    position: absolute;
+    top: 26px;
+    right: 24px;
+    text-align: center;
+    &_in{
+      font-size: 14px;
+      font-weight: bold;
+      color: #9d0e12;
+      text-decoration: none;
     }
   }
 }
