@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 620px;
   margin: 0 auto;
+  height: 140px;
   &__head{
     margin: 24px auto 0 auto;
     font-size: 20px;
@@ -26,6 +27,8 @@
       font-size: 12px;
       border: 1px solid #9d0e12;
       border-radius: 8px;
+      text-decoration: none;
+      color: #a6a6a6;
       &__inner{
         margin: 12px 0 8px;
         &__book{
@@ -33,8 +36,195 @@
           font-size: 30px;
           color: #3b579d;
         }
-        &_letter{
-          text-decoration: none;
+      }
+    }
+    &__separator{
+      margin: 10px;
+      float: left;
+    }
+    &__container{
+      width: 47%;
+      float: left;
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      border: 1px solid #9d0e12;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #a6a6a6;
+      &__inner{
+        margin: 12px 0 8px;
+        &__twitter{
+          border-radius: 5px;
+          font-size: 30px;
+          color: #1ba1f1;
+        }
+      }
+    }
+  }
+}
+
+.container{
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  &__heading{
+    margin: 24px auto 0 auto;
+    font-size: 20px;
+    padding: 12px 0 24px 0;
+    position: relative;
+    &_separator{
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 60px;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #9d0e12;
+    }
+  }
+  &__form{
+    margin-bottom: 24px;
+    &__user{
+      &__mail{
+        &_text{
+          font-size: 12px;
+          color: black;
+          font-weight: bold;
+        }
+        &_input{
+          border: 1px solid #eeeeee;
+          display: block;
+          padding: 12px;
+          border-radius: 8px;
+          box-sizing: border-box;
+          width: 100%;
+          margin-top: 4px;
+          margin-bottom: 12px;
+          height: 39px;
+        }
+        .container__form__user__mail_input:focus{
+          border: solid 1px black;
+          outline: 0;
+        }
+      }
+      &__actions{
+        text-align: center;
+        margin-top: 24px;
+        &_primary{
+          background: #9d0e12;
+          color: white;
+          width: 200px;
+          font-size: 14px;
+          border-radius: 22px;
+          height: 44px;
+          line-height: 44px;
+          cursor: pointer;
+        }
+        &__secondary{
+          text-align: center;
+          margin-top: 16px;
+          a{
+            font-size: 13px;
+            color: #9d0e12;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// #TODO 新規登録
+.registration{
+  &__container{
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    &__notice{
+      text-align: center;
+      margin: 12px;
+      background: #fafafa;
+      font-size: 12px;
+      padding: 12px 24px;
+      border-radius: 12px;
+    }
+  }
+  &__narrow{
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    &__heading{
+      margin: 24px auto 0 auto;
+      font-size: 20px;
+      padding: 12px 0 24px 0;
+      position: relative;
+      &_separator{
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 60px;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #9d0e12;
+      }
+    }
+    &__form{
+      margin-bottom: 24px;
+      &__user{
+        &__field{
+          &__text{
+            font-size: 12px;
+            color: black;
+            font-weight: bold;
+          }
+          &_label{
+            font-size: 12px;
+            color: black;
+            font-weight: bold;
+          }
+          &_input{
+            border: 1px solid #eeeeee;
+            display: block;
+            padding: 12px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            height: 39px;
+          }
+          .registration__narrow__form__user__field_input:focus{
+            outline: 0;
+            border: solid 1px black;
+          }
+        }
+        &__actions{
+          text-align: center;
+          margin-top: 24px;
+          &__primary{
+            background: #9d0e12;
+            color: white;
+            width: 200px;
+            font-size: 14px;
+            text-align: center;
+            border: 1px solid #9d0e12;
+            border-radius: 22px;
+            height: 44px;
+            line-height: 44px;
+            margin: 0 auto;
+            display: block;
+            cursor: pointer;
+          }
+          &__already{
+            text-align: center;
+            margin-top: 16px;
+            a{
+              font-size: 13px;
+              color: #9d0e12;
+              text-decoration: none;
+            }
+          }
         }
       }
     }
