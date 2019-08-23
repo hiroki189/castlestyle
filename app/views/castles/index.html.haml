@@ -14,7 +14,7 @@
         %li
           = link_to "城ランキング", ""
         %li
-          = link_to "城スタイル投稿", ""
+          = link_to "城スタイル投稿", "/castles/new"
 
     .banner__login
       = link_to "ログイン", "", class: "banner__login_in"
@@ -34,7 +34,7 @@
   .home__article
     %h2.home__article__head
       お城
-      = link_to "もっと見る›", "" ,class: "home__article__head__readmore"
+      = link_to "もっと見る›", "/castles/show" ,class: "home__article__head__readmore"
       %hr.home__article__head__separator
     %ul.home__article__primary
       %li.home__article__primary__wide
