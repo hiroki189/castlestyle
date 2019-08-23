@@ -1,0 +1,18 @@
+%header
+  .banner
+    = render "castle/header"
+.narrow
+  %h2.narrow__head
+    SNSアカウントで登録・ログイン
+    %hr.narrow__head__separator
+  .narrow__login
+    %a{href:"", class: "narrow__login__face"}
+      .narrow__login__face__inner
+        %i.fab.fa-facebook-square.narrow__login__face__inner__book
+        %br Facebook
+    .narrow__login__separator
+    %a{href: "", class:"narrow__login__container"}
+      .narrow__login__inner
+        %i.fab.fa-twitter-square
+        %br
+          Twitter
