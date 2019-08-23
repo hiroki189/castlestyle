@@ -1,0 +1,178 @@
+.style{
+  &__photo{
+    &__header{
+      text-align: center;
+      background-size: cover;
+      background-position: center center;
+      font-size: 17px;
+      font-weight: bold;
+      border-bottom: 1px solid #eeeeee;
+      padding: 12px 0;
+      &__container{
+        padding: 8px 0;
+        color: black;
+      }
+    }
+    &__narrow{
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto;
+      &__container{
+        margin-bottom: 24px;
+        &__new{
+          &__heading{
+            padding-left: 0;
+            font-size: 16px;
+            margin: 24px auto 0 auto;
+            padding: 12px 0 24px 0;
+            position: relative;
+            &__separator{
+              display: block;
+              position: absolute;
+              width: 60px;
+              height: 1;
+              border: 0;
+              border-top: 1px solid #9d0e12;
+            }
+          }
+          &__notice{
+            background: #fafafa;
+            font-size: 12px;
+            padding: 12px 24px;
+            border-radius: 12px;
+          }
+          &__select{
+            margin-top: 12px;
+            &__theme{
+              display: none;
+            }
+            &__single{
+              position: relative;
+              &__input{
+                cursor: pointer;
+                border-radius: 1px solid #d0d0d0;
+                padding: 8px 8px;
+                display: inline-block;
+                width: 100%;
+                position: relative;
+                box-sizing: border-box;
+                &__selected{
+                  width: 100%;
+                }
+              }
+            }
+          }
+          &__photo{
+            background: #eeeeee;
+            height: 0;
+            padding-bottom: 75%;
+            background-size: 32px 32px;
+            text-align: center;
+            background-position: center center;
+            margin-top: 12px;
+            &__image{
+              width: 100%;
+              vertical-align: bottom;
+              display: none;
+            }
+          }
+          &__field{
+            margin-top: 24px;
+            margin-bottom: 24px;
+            &__secondary{
+              width: 200px;
+              font-size: 12px;
+              text-align: center;
+              color: #9d0e12;
+              border-radius: 15px;
+              height: 30px;
+              margin: 0 auto;
+              line-height: 30px;
+              display: block;
+              border: 1px solid #9d0e12;
+              text-decoration: none;
+            }
+          }
+          &__place{
+            &__collection{
+              display: list-item;
+              padding: 8px 0 8px 12px;
+              border-bottom: 1px solid #eeeeee;
+              display: none;
+              &__container{
+                width: 100%;
+                &__name{
+                  line-height: 1.2;
+                  font-size: 15px;
+                  margin: 12px 0 24px 0;
+                }
+                &__action{
+                  width: 50%;
+                  &_delete{
+                    font-size: 13px;
+                    color: #9d0e12;
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+            &__field{
+              margin-top: 24px;
+              margin-bottom: 24px;
+              &__add{
+                font-size: 12px;
+                width: 200px;
+                text-align: center;
+                color: #9d0e12;
+                border: 1px solid #9d0e12;
+                border-radius: 15px;
+                line-height: 30px;
+                margin: 0 auto;
+                display: block;
+                text-decoration: none;
+              }
+            }
+          }
+          &__area{
+            &__label{
+              font-size: 12px;
+              color: black;
+              font-weight: bold;
+            }
+            &__text{
+              border: 1px solid #9d0e12;
+              display: block;
+              padding: 12px;
+              border-radius: 8px;
+              box-sizing: border-box;
+              width: 100%;
+              margin-top: 4px;
+              margin-bottom: 12px;
+            }
+            .style__photo__narrow__container__new__area__text:focus{
+              outline: 0;
+              border: 1px solid black;
+            }
+          }
+          &__actions{
+            text-align: center;
+            margin-top: 24px;
+            &__primary{
+              background: #9d0e12;
+              color: white;
+              width: 200px;
+              font-size: 14px;
+              text-align: center;
+              border: 1px solid #9d0e12;
+              border-radius: 22px;
+              height: 44px;
+              line-height: 44px;
+              margin: 0 auto;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
