@@ -1,0 +1,13 @@
+%header
+  .banner
+    = render "castles/header"
+
+%div.mypage
+  = link_to "投稿", "/castles/new", class: "mypage__new"
+  .mypage__narrow
+    .mypage__narrow__profile
+      .mypage__narrow__profile__image
+        = image_tag "" , class: "mypage__narrow__profile__image__img"
+      .mypage__narrow__profile__name
+      .mypage__narrow__profile__secondary
+        = link_to "プロフィール編集", "", class: "mypage__narrow__profile__secondary__mini"
