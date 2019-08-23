@@ -1,24 +1,41 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|e-mail|string|null:false|
+|nickname|string|null:false,length:{maximum: 20}|
 
-Things you may want to cover:
+## Association
+- has_many :castles, dependent: :destroy
+- has_many :comments
+- has_many :article
 
-* Ruby version
+## castlesテーブル
+|name|string|null: false, length:{maxmum: 40}|
+|references|article_id|
 
-* System dependencies
+## Association
+- belongs_to :user
+- has_many :comments, dependent: :destroy
 
-* Configuration
+## commentsテーブル
+|comment|string|
+|user_id|references|null: false, foreign_key: true|
+|castle_id|references|null: flase, foreign_key: true|
 
-* Database creation
+## Association
+- belongs_to :user
+- belongs_to :castle
 
-* Database initialization
+## active_strageテーブル
 
-* How to run the test suite
+## Association
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## ariclesテーブル
+|name|string|null: false|
 
-* ...
+
+## Association
+- has_many :castles
