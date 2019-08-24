@@ -69,3 +69,7 @@ gem 'sprockets', '3.7.2'
 gem 'haml-rails'
 
 gem 'kaminari'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
