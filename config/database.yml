@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: castlestyle_production
-  username: castlestyle
-  password: <%= ENV['password0000'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
