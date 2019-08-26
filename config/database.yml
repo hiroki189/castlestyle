@@ -51,4 +51,4 @@ production:
   <<: *default
   database: castlestyle_production
   username: castlestyle
-  password: <%= ENV['CASTLESTYLE_DATABASE_PASSWORD'] %>
+  password: <%= ENV['password0000'] %>
