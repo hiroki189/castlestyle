@@ -74,6 +74,7 @@ gem 'sprockets', '3.7.2'
 gem 'haml-rails'
 
 gem 'kaminari'
+gem 'sshkit', '1.18.2'
 
 group :production do
   gem 'unicorn', '5.4.1'
