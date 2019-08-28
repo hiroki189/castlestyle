@@ -75,6 +75,7 @@ gem 'haml-rails'
 
 gem 'kaminari'
 gem 'sshkit', '1.18.2'
+gem 'devise'
 
 group :production do
   gem 'unicorn', '5.4.1'
