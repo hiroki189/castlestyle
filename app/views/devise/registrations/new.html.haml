@@ -15,24 +15,23 @@
         ユーザー登録
         %hr.registration__narrow__heading_separator
       .registration__narrow__form
-        %form{class: "registration__narrow__form__user", method: "post"}
-          .registration__narrow__form__user__field
-            %label.registration__narrow__form__user__field__text
-              メールアドレス
-            = f.email_field :email, class: "registration__narrow__form__user__field_input"
-          .registration__narrow__form__user__field
-            %label.registration__narrow__form__user__field__text
-              ユーザー名
-            %span.registration__narrow__form__user__field_label
-              (3~20文字・絵文字使用不可)
-            = f.text_field :name, class: "registration__narrow__form__user__field_input"
-          .registration__narrow__form__user__field
-            %label.registration__narrow__form__user__field__text
-              パスワード
-            %splan.registration__narrow__form__user__field_label
-              (6文字以上)
-            = f.password_field :password, class: "registration__narrow__form__user__field_input",value: ""
-          .registration__narrow__form__user__actions
-            =f.submit "登録", class: "registration__narrow__form__user__actions__primary"
-            .registration__narrow__form__user__actions__already
-              =render "devise/shared/links"
+        .registration__narrow__form__user__field
+          %label.registration__narrow__form__user__field__text
+            メールアドレス
+          = f.email_field :email, class: "registration__narrow__form__user__field_input"
+        .registration__narrow__form__user__field
+          %label.registration__narrow__form__user__field__text
+            ユーザー名
+          %span.registration__narrow__form__user__field_label
+            (3~20文字・絵文字使用不可)
+          = f.text_field :name, class: "registration__narrow__form__user__field_input"
+        .registration__narrow__form__user__field
+          %label.registration__narrow__form__user__field__text
+            パスワード
+          %splan.registration__narrow__form__user__field_label
+            (6文字以上)
+          = f.password_field :password, class: "registration__narrow__form__user__field_input",value: ""
+        .registration__narrow__form__user__actions
+          =f.submit "登録", class: "registration__narrow__form__user__actions__primary"
+          .registration__narrow__form__user__actions__already
+            =render "devise/shared/links"
