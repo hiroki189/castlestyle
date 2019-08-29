@@ -1,0 +1,17 @@
+%header
+  .banner
+    = render "castles/header"
+
+.container
+  = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+    %h2.container__heading
+      パスワードをリセット
+      %hr.container__heading_separator
+    .container__form
+      = render "devise/shared/error_messages", resource: resource
+      .container__form__user__mail
+        %label.container__form__user__mail_text
+          登録しているメールアドレス
+        = f.email_field :email,class: "container__form__user__mail_input"
+      .container__form__user__actions
+        = f.submit "メールを送信する", class: "container__form__user__actions_primary"

@@ -19,22 +19,20 @@
           Twitter
 
 .container
-  %h2.container__heading
-    メールアドレスでログイン
-    %hr.container__heading_separator
-  .container__form
-    %form{class: "container__form__user"}
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    %h2.container__heading
+      メールアドレスでログイン
+      %hr.container__heading_separator
+    .container__form
       .container__form__user__mail
         %label.container__form__user__mail_text
           メールアドレス
-        %input{autofocus: "autofocus", autocomplete: "email", class: "container__form__user__mail_input"}
+        = f.email_field :email,class: "container__form__user__mail_input"
       .container__form__user__mail
         %label.container__form__user__mail_text
           パスワード
-        %input{autocomplete: "off", class: "container__form__user__mail_input"}
+        = f.password_field :password,class: "container__form__user__mail_input"
       .container__form__user__actions
-        %input{type: "submit",class: "container__form__user__actions_primary",value: "ログイン" }
+        =f.submit 'ログイン',class: "container__form__user__actions_primary"
         .container__form__user__actions__secondary
-          = link_to "新規登録はこちら", ""
-          %div
-            = link_to "パスワードが分からない場合はこちら", ""
+          = render "devise/shared/links"
