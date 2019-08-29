@@ -10,3 +10,12 @@
         %button{type: "submit", class: "banner__search__form__field__submit__global"}
           %span.banner__search__form__field__submit__global_field
             %i.fas.fa-search
+
+  - if user_signed_in?
+    .banner__mypage
+      = link_to users_path, class: "banner__mypage_in" do
+        %i.fas.fa-user.banner__mypage__user
+        MYページ
+  - else
+    .banner__login
+      = link_to "ログイン", new_user_session_path, class: "banner__login_in"
