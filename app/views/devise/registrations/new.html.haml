@@ -2,9 +2,6 @@
   .banner
     = render "castles/header"
 
-    .banner__login
-      = link_to "ログイン", "", class: "banner__login_in"
-
 %div.registration
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     .registration__container
@@ -34,4 +31,4 @@
         .registration__narrow__form__user__actions
           =f.submit "登録", class: "registration__narrow__form__user__actions__primary"
           .registration__narrow__form__user__actions__already
-            =render "devise/shared/links"
+            = render "devise/shared/links"
