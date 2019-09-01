@@ -15,6 +15,6 @@ class CastlesController < ApplicationController
   end
 
   def castle_params
-    params.require(:castle).permit(:name,image: [])
+    params.require(:castle).permit(:name,:image)
   end
 end
