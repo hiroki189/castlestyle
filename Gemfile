@@ -81,6 +81,7 @@ gem 'active_hash'
 gem 'enum_help'
 gem 'pry-byebug'
 gem 'jquery-rails'
+gem 'fog-aws'
 
 group :production do
   gem 'unicorn', '5.4.1'
