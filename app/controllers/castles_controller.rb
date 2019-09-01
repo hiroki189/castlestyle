@@ -6,5 +6,15 @@ class CastlesController < ApplicationController
   end
 
   def new
+    @castle = Castle.new
+    # binding.pry
+  end
+
+  def create
+    Castle.create(castle_params)
+  end
+
+  def castle_params
+    params.require(:castle).permit(:name,image: [])
   end
 end
