@@ -82,6 +82,10 @@ gem 'enum_help'
 gem 'pry-byebug'
 gem 'jquery-rails'
 gem 'fog-aws'
+gem "aws-sdk-s3", require: false
+gem 'carrierwave'
+gem 'mini_magick'
+# gem 'excon'
 
 group :production do
   gem 'unicorn', '5.4.1'
