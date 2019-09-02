@@ -5,6 +5,7 @@
 |------|----|-------|
 |e-mail|string|null:false|
 |nickname|string|null:false,length:{maximum: 20}|
+|content|text|null:false|
 
 ## Association
 - has_many :castles, dependent: :destroy
@@ -39,3 +40,8 @@
 
 ## Association
 - has_many :castles
+
+#Castlestyle
+日本の城を見ることができるサイトです。
+#URL
+http://13.114.92.47/
