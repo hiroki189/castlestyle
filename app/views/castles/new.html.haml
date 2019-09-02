@@ -48,6 +48,6 @@
             .style__photo__narrow__container__new__area
               %label{class: "style__photo__narrow__container__new__area__label"}
                 例) 最上階から見た景色は絶景
-              %textarea{class: "style__photo__narrow__container__new__area__text"}
+              =f.text_area :content, class: "style__photo__narrow__container__new__area__text"
             .style__photo__narrow__container__new__actions
               =f.submit "投稿",class: "style__photo__narrow__container__new__actions__primary"
