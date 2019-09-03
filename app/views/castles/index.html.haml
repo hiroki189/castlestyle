@@ -21,14 +21,20 @@
 %div.home
   %ul.home__wide
     %li.home__wide__large
-      = link_to "", "", class: "home__wide__large_article"
+      = link_to image_tag(@castle.find(1).image),"", class: "home__wide__large_article"
       .home__wide__large__text
+        .home__wide__large__text__title
+          = Castle.find(1).content
     %li.home__wide__large
-      = link_to "", "", class: "home__wide__large_article"
+      = link_to image_tag(@castle.find(2).image), "", class: "home__wide__large_article"
       .home__wide__large__text
+        .home__wide__large__text__title
+          = Castle.find(2).content
     %li.home__wide__large
-      = link_to "", "", class: "home__wide__large_article"
+      = link_to image_tag(@castle.find(3).image), "", class: "home__wide__large_article"
       .home__wide__large__text
+        .home__wide__large__text__title
+          = Castle.find(3).content
 
   .home__article
     %h2.home__article__head
@@ -36,26 +42,12 @@
       = link_to "もっと見る›", "/castles/show" ,class: "home__article__head__readmore"
       %hr.home__article__head__separator
     %ul.home__article__primary
-      %li.home__article__primary__wide
-        =link_to "", "", class: "home__article__primary__wide__list"
-        .home__article__primary__wide__nail
-          = image_tag "",class: "home__article__primary__wide__nail_image"
-        .home__article__primary__wide__media
-          .home__article__primary__wide__media__title
-      %li.home__article__primary__wide
-        =link_to "", "", class: "home__article__primary__wide__list"
-        .home__article__primary__wide__nail
-          = image_tag "",class: "home__article__primary__wide__nail_image"
-        .home__article__primary__wide__media
-          .home__article__primary__wide__media__title
-      %li.home__article__primary__wide
-        =link_to "", "", class: "home__article__primary__wide__list"
-        .home__article__primary__wide__nail
-          = image_tag "",class: "home__article__primary__wide__nail_image"
-        .home__article__primary__wide__media
-          .home__article__primary__wide__media__title
+      - @castle.each do |castle|
+        %li.home__article__primary__wide
+          =link_to "", "", class: "home__article__primary__wide__list"
+          .home__article__primary__wide__nail
+            = image_tag castle.image,class: "home__article__primary__wide__nail_image"
+          .home__article__primary__wide__media
+            .home__article__primary__wide__media__title
+              = castle.content
 
-%footer
-  .top
-    .top__slide
-      TOP△

@@ -5,51 +5,49 @@
         お城スタイルを投稿する
     .style__photo__narrow
       .style__photo__narrow__container
-        %form{class: "style__photo__narrow__container__new", method: "post"}
-          %h2.style__photo__narrow__container__new__heading
-            1. お城を選択
-            %hr.style__photo__narrow__container__new__heading__separator
-          .style__photo__narrow__container__new__notice
-            どこのお城に行ったか教えてください
-          .style__photo__narrow__container__new__select
-            %select{class: "style__photo__narrow__container__new__select__theme"}
-              %option{value:{selected: "selected"}}
-            .style__photo__narrow__container__new__select__single
-              .style__photo__narrow__container__new__select__single__input
-                %input{type: "text",autocomplete: "off", class: "style__photo__narrow__container__new__select__single__input__selected"}
+        .style__photo__narrow__container__new
+          = form_for @castle do |f|
+            %h2.style__photo__narrow__container__new__heading
+              1. お城を選択
+              %hr.style__photo__narrow__container__new__heading__separator
+            .style__photo__narrow__container__new__notice
+              どこのお城に行ったか教えてください
+            .style__photo__narrow__container__new__select
+              = f.collection_select :name, Castlename.all,:id, :name,{prompt: "----"},class: "style__photo__narrow__container__new__select__theme"
 
-          %h2.style__photo__narrow__container__new__heading
-            2. 写真
-            %hr.style__photo__narrow__container__new__heading__separator
-          .style__photo__narrow__container__new__notice
-            お城写真を選択してください。
-          .style__photo__narrow__container__new__photo
-            = image_tag "", class: "style__photo__narrow__container__new__photo__image"
-          .style__photo__narrow__container__new__field
-            = link_to "写真を選択", "", class:"style__photo__narrow__container__new__field__secondary"
+            %h2.style__photo__narrow__container__new__heading
+              2. 写真
+              %hr.style__photo__narrow__container__new__heading__separator
+            .style__photo__narrow__container__new__notice
+              お城写真を選択してください。
+            .style__photo__narrow__container__new__photo
+              = f.file_field :image, multipie: true,id: 'pic_upload',  class: "style__photo__narrow__container__new__photo__image"
+            .style__photo__narrow__container__new__field
+              .style__photo__narrow__container__new__field__secondary{onclick: "$('#pic_upload').click()"}
+                写真を選択
 
-          %h2.style__photo__narrow__container__new__heading
-            3. スポット
-            %hr.style__photo__narrow__container__new__heading__separator
-          .style__photo__narrow__container__new__notice
-            庭園・山・門などの場所情報を追加できます。
-          %ul.style__photo__narrow__container__new__place
-            %li.style__photo__narrow__container__new__place__collection
-              %tabble.style__photo__narrow__container__new__place__collection__container
-                %tbody
-                  %tr
-                    %td.style__photo__narrow__container__new__place__collection__container__name
-                    %td.style__photo__narrow__container__new__place__collection__container__action
-                      = link_to "削除", "", class: "style__photo__narrow__container__new__place__collection__container__action_delete"
-            .style__photo__narrow__container__new__place__field
-              = link_to "スポットを追加", "", class: "style__photo__narrow__container__new__place__field__add"
+            %h2.style__photo__narrow__container__new__heading
+              3. スポット
+              %hr.style__photo__narrow__container__new__heading__separator
+            .style__photo__narrow__container__new__notice
+              庭園・山・門などの場所情報を追加できます。
+            %ul.style__photo__narrow__container__new__place
+              %li.style__photo__narrow__container__new__place__collection
+                %tabble.style__photo__narrow__container__new__place__collection__container
+                  %tbody
+                    %tr
+                      %td.style__photo__narrow__container__new__place__collection__container__name
+                      %td.style__photo__narrow__container__new__place__collection__container__action
+                        = link_to "削除", "", class: "style__photo__narrow__container__new__place__collection__container__action_delete"
+              .style__photo__narrow__container__new__place__field
+                = link_to "スポットを追加", "", class: "style__photo__narrow__container__new__place__field__add"
 
-          %h2.style__photo__narrow__container__new__heading
-            4.コメント
-            %hr.style__photo__narrow__container__new__heading__separator
-          .style__photo__narrow__container__new__area
-            %label{class: "style__photo__narrow__container__new__area__label"}
-              例) 最上階から見た景色は絶景
-            %textarea{class: "style__photo__narrow__container__new__area__text"}
-          .style__photo__narrow__container__new__actions
-            %input{type: "submit", value: "投稿",class: "style__photo__narrow__container__new__actions__primary"}
+            %h2.style__photo__narrow__container__new__heading
+              4.コメント
+              %hr.style__photo__narrow__container__new__heading__separator
+            .style__photo__narrow__container__new__area
+              %label{class: "style__photo__narrow__container__new__area__label"}
+                例) 最上階から見た景色は絶景
+              =f.text_area :content, class: "style__photo__narrow__container__new__area__text"
+            .style__photo__narrow__container__new__actions
+              =f.submit "投稿",class: "style__photo__narrow__container__new__actions__primary"
