@@ -21,7 +21,7 @@
             .style__photo__narrow__container__new__notice
               お城写真を選択してください。
             .style__photo__narrow__container__new__photo
-              = f.file_field :image, id: 'pic_upload',  class: "style__photo__narrow__container__new__photo__image"
+              = f.file_field :image, multipie: true,id: 'pic_upload',  class: "style__photo__narrow__container__new__photo__image"
             .style__photo__narrow__container__new__field
               .style__photo__narrow__container__new__field__secondary{onclick: "$('#pic_upload').click()"}
                 写真を選択
