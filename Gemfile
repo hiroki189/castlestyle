@@ -74,7 +74,7 @@ gem 'sprockets', '3.7.2'
 gem 'haml-rails'
 
 gem 'kaminari'
-gem 'sshkit', '1.18.2'
+
 gem 'devise'
 gem 'rails-i18n', '~>5.1'
 gem 'active_hash'
@@ -85,7 +85,6 @@ gem 'fog-aws'
 gem "aws-sdk-s3", require: false
 gem 'carrierwave'
 gem 'mini_magick'
-# gem 'excon'
 
 group :production do
   gem 'unicorn', '5.4.1'
