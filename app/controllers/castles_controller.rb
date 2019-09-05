@@ -1,9 +1,10 @@
 class CastlesController < ApplicationController
   def index
-    @castle = Castle.all.limit(6)
+    @castles = Castle.all.limit(6)
   end
 
   def show
+    @castles = Castle.order("created_at DESC").page(params[:page]).per(4)
   end
 
   def new
