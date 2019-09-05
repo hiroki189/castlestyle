@@ -6,11 +6,7 @@
         %li
           = link_to "TOP", "/"
         %li
-          = link_to "Q&A",""
-        %li
-          = link_to "西日本の城", ""
-        %li
-          = link_to "東日本の城", ""
+          = link_to "全国の城", ""
         %li
           = link_to "城ランキング", ""
         %li
@@ -19,22 +15,10 @@
     
 
 %div.home
-  -# %ul.home__wide
-  -#   %li.home__wide__large
-  -#     = link_to image_tag(@castle.find(1).image),"", class: "home__wide__large_article"
-  -#     .home__wide__large__text
-  -#       .home__wide__large__text__title
-  -#         = Castle.find(1).content
-  -#   %li.home__wide__large
-  -#     = link_to image_tag(@castle.find(2).image), "", class: "home__wide__large_article"
-  -#     .home__wide__large__text
-  -#       .home__wide__large__text__title
-  -#         = Castle.find(2).content
-  -#   %li.home__wide__large
-  -#     = link_to image_tag(@castle.find(3).image), "", class: "home__wide__large_article"
-  -#     .home__wide__large__text
-  -#       .home__wide__large__text__title
-  -#         = Castle.find(3).content
+  .home__view
+    %ul.home__view__slider
+      %Li.home__view__slider__clone
+        = image_tag "top_image01.jpg"
 
   .home__article
     %h2.home__article__head
