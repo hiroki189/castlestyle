@@ -29,11 +29,11 @@
 |name|string|null: false|
 |address|string|null: false|
 |time|time|null: false|
-|image|integer|null: false|
+|image|string|null: false|
 |text|text|null: false|
 |detail|text|null: false|
 |map|string|null: false|
-|castlename|reference|null: fase, foreign_key: true|
+|castlename|reference|null: false, foreign_key: true|
 
 ## Association
 - belongs_to :castle
