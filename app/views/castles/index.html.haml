@@ -22,11 +22,11 @@
 
   .home__article
     %h2.home__article__head
-      お城
+      お城スタイル
       = link_to "もっと見る›", "/castles/show" ,class: "home__article__head__readmore"
       %hr.home__article__head__separator
     %ul.home__article__primary
-      - @castle.each do |castle|
+      - @castles.each do |castle|
         %li.home__article__primary__wide
           =link_to "", "", class: "home__article__primary__wide__list"
           .home__article__primary__wide__nail
