@@ -3,5 +3,5 @@ class Castle < ApplicationRecord
 
   belongs_to_active_hash :castlename
   has_one_attached :image
-  has_many :citadel
+  belongs_to :citadel
 end
