@@ -20,6 +20,6 @@ class CastlesController < ApplicationController
 
   private
   def castle_params
-    params.require(:castle).permit(:name,:image, :content)
+    params.require(:castle).permit(:name,:castle_area,:image, :content)
   end
 end
