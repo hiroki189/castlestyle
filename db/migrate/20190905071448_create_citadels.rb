@@ -4,6 +4,7 @@ class CreateCitadels < ActiveRecord::Migration[5.2]
       t.string    :name, null: false
       t.string    :address, null: false
       t.string    :time, null: false
+      t.string    :gazou, null: false
       t.string     :image, null: false
       t.text      :text, null: false
       t.text      :detail, null: false
