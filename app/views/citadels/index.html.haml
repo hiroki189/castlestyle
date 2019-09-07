@@ -1,0 +1,14 @@
+%header
+  .banner
+    = render "castles/header"
+
+.summary
+  %ul.summary__article
+    - @citadels.each do |citadel|
+      %li.summary__article__wide
+        = link_to "" , class: "summary__article__wide__list" do
+          .summary__article__wide__list__thumb
+            = image_tag citadel.image
+          .summary__article__wide__list__media
+            .summary__article__wide__list__media__title
+          .clearfix
