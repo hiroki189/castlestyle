@@ -2,19 +2,19 @@
   .banner
     = render "castles/header"
 
-.page
-  %h1.page__heading
+.pages
+  %h1.pages__heading
     お城スタイル
-    %hr.page__heading__separator
-  %ul.page__large
+    %hr.pages__heading__separator
+  %ul.pages__large
     - @castles.each do |castle|
-      %li.page__large__narrow
-        %a{href: "", class: "page__large__narrow__list"}
-          .page__large__narrow__list__thumbnail
-            .page__large__narrow__list__thumbnail__image
+      %li.pages__large__narrow
+        %a{href: "", class: "pages__large__narrow__list"}
+          .pages__large__narrow__list__thumbnail
+            .pages__large__narrow__list__thumbnail__image
               = image_tag castle.image
-          .page__large__narrow__list__title
-            .page__large__narrow__list__title__article
+          .pages__large__narrow__list__title
+            .pages__large__narrow__list__title__article
               = castle.content
           .clearfix
-  =paginate(@castles)
+  = paginate(@castles)
