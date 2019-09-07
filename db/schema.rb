@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_09_05_071448) do
     t.string "name", null: false
     t.string "address", null: false
     t.string "time", null: false
+    t.string "gazou", null: false
     t.string "image", null: false
     t.text "text", null: false
     t.text "detail", null: false
