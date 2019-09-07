@@ -3,12 +3,17 @@
     = render "castles/header"
 
 .summary
+  %h2.summary__nation
+    全国の城
+    %hr.summary__nation__separator
   %ul.summary__article
     - @citadels.each do |citadel|
       %li.summary__article__wide
-        = link_to "" , class: "summary__article__wide__list" do
+        = link_to citadel_path(citadel), class: "summary__article__wide__list" do
           .summary__article__wide__list__thumb
-            = image_tag citadel.image
+            = image_tag citadel.gazou
           .summary__article__wide__list__media
             .summary__article__wide__list__media__title
+              = citadel.name
           .clearfix
+  = paginate(@citadels)
