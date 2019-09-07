@@ -13,30 +13,12 @@
 - has_many :article
 
 ## castlesテーブル
-|Column|Type|Options|
-|------|----|-------|
 |name|string|null: false, length:{maxmum: 40}|
 |references|article_id|
 
 ## Association
 - belongs_to :user
 - has_many :comments, dependent: :destroy
-- has_many :citadeles
-
-## citadelsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|address|string|null: false|
-|time|time|null: false|
-|image|string|null: false|
-|text|text|null: false|
-|detail|text|null: false|
-|map|string|null: false|
-|castlename|reference|null: false, foreign_key: true|
-
-## Association
-- belongs_to :castle
 
 ## commentsテーブル
 |comment|string|
