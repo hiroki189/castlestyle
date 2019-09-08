@@ -1,13 +1,13 @@
 ## README
 
-*Castlestyle*
+ #Castlestyle
 日本全国の入館できる城をを見る・投稿することができるサイトです。  ポートフォリオとして作成しました。
-*URL*
-URL: <http://13.114.92.47/>
+#URL
+<http://13.114.92.47/>
 
-!57d6efec91c938b609636891c3cd3c21.jpg
+!/assets/images/57d6efec91c938b609636891c3cd3c21.jpg
 
-*使用技術*
+#使用技術
 
 ・Ruby 2.5.1
 ・Ruby on Rails 5.2.3
@@ -17,7 +17,7 @@ URL: <http://13.114.92.47/>
 ・Javascript
 ・AWS
 
-*機能一覧*
+#機能一覧
 
 ・ユーザー登録、ログイン機能(devise)、
 ・投稿機能
