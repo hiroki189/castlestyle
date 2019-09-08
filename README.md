@@ -9,7 +9,12 @@
 
 ## 使用技術
 
-・Ruby 2.5.1<br>・Ruby on Rails 5.2.3<br>・MySQL2<br>・SCSS<br>・jQuery<br>・Javascript  ・AWS
+・Ruby 2.5.1<br>
+・Ruby on Rails 5.2.3<br>
+・MySQL2<br>
+・SCSS<br>・jQuery<br>
+・Javascript  
+・AWS
 
 ## 機能一覧
 
