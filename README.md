@@ -18,6 +18,10 @@
 
 ## 機能一覧
 
-・ユーザー登録<br>ログイン機能(devise)<br>・投稿機能<br>・ページネーション(kaminari)<br>・GoogleMap 共有
+・ユーザー登録<br>
+・ログイン機能(devise)<br>
+・投稿機能<br>
+・ページネーション(kaminari)<br>
+・GoogleMap 共有
 
 
