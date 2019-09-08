@@ -10,7 +10,6 @@ class CastlesController < ApplicationController
   def new
     redirect_to new_user_session_path unless user_signed_in?
     @castle = Castle.new
-    # binding.pry
   end
 
   def create
