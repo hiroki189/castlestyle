@@ -9,10 +9,10 @@
 
 ## 使用技術
 
-・Ruby 2.5.1 ・Ruby on Rails 5.2.3 ・MySQL2 ・SCSS ・jQuery ・Javascript ・AWS
+・Ruby 2.5.1  ・Ruby on Rails 5.2.3  ・MySQL2  ・SCSS  ・jQuery  ・Javascript  ・AWS
 
 ## 機能一覧
 
-・ユーザー登録、ログイン機能(devise)、 ・投稿機能 ・ページネーション(kaminari) ・GoogleMap 共有
+・ユーザー登録、ログイン機能(devise)、  ・投稿機能  ・ページネーション(kaminari)  ・GoogleMap 共有
 
 
