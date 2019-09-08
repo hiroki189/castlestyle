@@ -13,6 +13,6 @@
 
 ## 機能一覧
 
-・ユーザー登録、ログイン機能(devise)、  ・投稿機能  ・ページネーション(kaminari)  ・GoogleMap 共有
+・ユーザー登録、ログイン機能(devise)、  ・投稿機能　　・ページネーション(kaminari)　　・GoogleMap 共有
 
 
