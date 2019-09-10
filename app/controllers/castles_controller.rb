@@ -1,4 +1,5 @@
 class CastlesController < ApplicationController
+  before_action  :configure_title
   def index
     @castles = Castle.all.limit(6)
   end
@@ -20,5 +21,9 @@ class CastlesController < ApplicationController
   private
   def castle_params
     params.require(:castle).permit(:name,:castle_area,:image, :content)
+  end
+
+  def configure_title
+    @page_title = '作品ページ'
   end
 end
