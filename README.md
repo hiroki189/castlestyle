@@ -26,12 +26,13 @@
 
 ## キャプチャ画像
 
-・ユーザー登録
-![demo](https://gyazo.com/263c0cb560fa4919a92e4f579301e043/raw)
+・ユーザー登録  
+![demo](https://gyazo.com/263c0cb560fa4919a92e4f579301e043/raw)  
 
-・ログイン
-![demo](https://gyazo.com/571129bb42f2d1bab8574ac560c356a2/raw)
+・ログイン  
+![demo](https://gyazo.com/571129bb42f2d1bab8574ac560c356a2/raw)  
 
-・投稿
-![demo](https://gyazo.com/50435e971c08e6b267df8fbdf59757d0/raw)
-![demo](https://gyazo.com/4193a4166d20ce6917711860767bb645/raw)
+・投稿  
+![demo](https://gyazo.com/50435e971c08e6b267df8fbdf59757d0/raw)  
+
+![demo](https://gyazo.com/4193a4166d20ce6917711860767bb645/raw)  
