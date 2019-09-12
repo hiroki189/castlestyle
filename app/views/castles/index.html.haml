@@ -17,7 +17,7 @@
   .home__view
     %ul.home__view__slider
       %Li.home__view__slider__clone
-        = image_tag "top_image01.jpg"
+        = image_tag "castle_mv.jpg"
 
   .home__article
     %h2.home__article__head
@@ -31,6 +31,9 @@
           .home__article__primary__wide__nail
             = image_tag castle.image,class: "home__article__primary__wide__nail_image"
           .home__article__primary__wide__media
+            %h2.home__article__primary__wide__media__name
+              = castle.siro.name
+              %hr.home__article__primary__wide__media__name__separator
             .home__article__primary__wide__media__title
               = castle.content
 
