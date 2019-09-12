@@ -15,6 +15,9 @@
               .page__style__large__narrow__list__thumbnail__image
                 = image_tag castle.image
             .page__style__large__narrow__list__title
+              .page__style__large__narrow__list__title__name
+                = castle.siro.name
+                %hr.page__style__large__narrow__list__title__name__separator
               .page__style__large__narrow__list__title__article
                 = castle.content
             .clearfix
