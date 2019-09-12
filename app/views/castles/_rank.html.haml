@@ -3,13 +3,15 @@
     投稿ランキング
     %hr.page__style__rank__ranking__list__separator
   %ul.page__style__rank__ranking__view
-    - @ranking.each.with_index(1) do |castle, i|
-      %li.page__style__rank__ranking__view__data
-        = link_to "" ,class: "page__style__rank__ranking__view__data__link" do
-          .page__style__rank__ranking__view__data__link__box
-            .page__style__rank__ranking__view__data__link__box__cell
-              %p.page__style__rank__ranking__view__data__link__box__cell__lighter
-                = i
-            .page__style__rank__ranking__view__data__link__box__pliem
-              %p.page__style__rank__ranking__view__data__link__box__pliem__space
-                = castle.siro.name
+    -# - @ranking.each.with_index(1) do |castle, i|
+    %li.page__style__rank__ranking__view__data
+      = link_to "" ,class: "page__style__rank__ranking__view__data__link" do
+        .page__style__rank__ranking__view__data__link__box
+          .page__style__rank__ranking__view__data__link__box__cell
+            %p.page__style__rank__ranking__view__data__link__box__cell__lighter
+              -# = i
+            .page__style__rank__ranking__view__data__link__box__cell__space
+              -# = castle.siro.name
+              
+          -# .page__style__rank__ranking__view__data__link__gazou
+          -#   = image_tag castle.image
