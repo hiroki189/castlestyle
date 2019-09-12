@@ -5,9 +5,8 @@ class CastlesController < ApplicationController
 
   def show
     @castles = Castle.order("created_at DESC").page(params[:page]).per(4)
-    castle_ids = Castle.group(:citadel_id).order('count_citadel_id DESC').limit(5).count(:citadel_id).keys
-    # @ranking = castle_ids.map {|id| Castle.find(id)}
-    # binding.pry
+    castle_ids = Castle.group(:siro_id).order('count_siro_id DESC').limit(5).count(:siro_id).keys
+    @ranking = Castle.where(siro_id: castle_ids)
   end
 
   def new
@@ -22,7 +21,7 @@ class CastlesController < ApplicationController
 
   private
   def castle_params
-    params.require(:castle).permit(:name,:citadel_id,:image, :content)
+    params.require(:castle).permit(:name, :siro_id,:image, :content)
   end
 
 end
