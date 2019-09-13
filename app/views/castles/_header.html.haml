@@ -2,14 +2,30 @@
   = image_tag "castle.png",size: "40x40"
   = link_to "castlestyle", "/", class: "banner__logo_name"
 .banner__search
-  %form_tag{action: "search_path", method: "get",class: "banner__search__form"}
-    %dl.banner__search__form__field
-      %dt
-        %input{type: "text",name: "keyword",id: "keyword", class: "banner__search__form__field_input", placeholder: "キーワード検索"}
-      %dd.banner__search__form__field__submit
-        %button{type: "submit", class: "banner__search__form__field__submit__global"}
-          %span.banner__search__form__field__submit__global_field
-            %i.fas.fa-search
+  %dl.banner__search__form
+    = search_form_for @search, url: citadel_path(@search_citadels) do |f|
+      .banner__search__form__field
+        %dt.banner__search__form__field_input
+          = f.text_field :name_cont, placeholder: "キーワード検索"
+        %dd.banner__search__form__field__submit
+          = button_tag type: "submit", class: "banner__search__form__field__submit__global" do
+            %span.banner__search__form__field__submit__global_field
+              %i.fas.fa-search
+
+
+  -# %dl.banner__search__form__field
+  -#   = search_form_for @search do |f|
+  -#   %dd.banner__search__form__field__submit
+  -#     =f.submit
+
+
+    -# = search_form_for @search do |f|
+    -# %dt
+    -#   = f.text_field name: "keyword", placeholder: "キーワード検索"
+    -# %dd.banner__search__form__field__submit
+    -#   = button_tag type:"submit", class: "banner__search__form__field__submit__global"
+    -#     %span.banner__search__form__field__submit__global_field
+    -#       %i.fas.fa-search
 
   - if user_signed_in?
     .banner__mypage
