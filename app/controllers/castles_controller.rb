@@ -4,7 +4,7 @@ class CastlesController < ApplicationController
   end
 
   def show
-    @castles = Castle.order("created_at DESC").page(params[:page]).per(4)
+    @castles = Castle.order("created_at DESC").page(params[:page]).per(12)
     @castle_ids = Castle.group(:siro_id).order('count_siro_id DESC').limit(5).count(:siro_id).keys
   end
 
