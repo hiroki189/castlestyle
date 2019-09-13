@@ -1,4 +1,4 @@
-class Castlename < ActiveHash::Base
+class Siro < ActiveHash::Base
   self.data = [
     {id: 1, name: "松前城"},{id: 2, name: "弘前城"},{id: 3, name: "丸岡城"},
     {id: 4, name: "白石城"},{id: 5, name: "白河小峰城"},{id: 6, name: "会津若松城"},

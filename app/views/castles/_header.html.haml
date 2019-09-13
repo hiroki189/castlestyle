@@ -2,7 +2,7 @@
   = image_tag "castle.png",size: "40x40"
   = link_to "castlestyle", "/", class: "banner__logo_name"
 .banner__search
-  %form{action: "", method: "POST",class: "banner__search__form"}
+  %form_tag{action: "search_path", method: "get",class: "banner__search__form"}
     %dl.banner__search__form__field
       %dt
         %input{type: "text",name: "keyword",id: "keyword", class: "banner__search__form__field_input", placeholder: "キーワード検索"}

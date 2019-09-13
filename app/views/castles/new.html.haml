@@ -13,7 +13,7 @@
             .style__photo__narrow__container__new__notice
               どこのお城に行ったか教えてください
             .style__photo__narrow__container__new__select
-              = f.collection_select :castle_area, Castlename.all,:id, :name,{prompt: "----"},class: "style__photo__narrow__container__new__select__theme"
+              = f.collection_select :siro_id, Siro.all, :id, :name, {prompt: "----"}, {class: "style__photo__narrow__container__new__select__theme"}
 
             %h2.style__photo__narrow__container__new__heading
               2. 写真
