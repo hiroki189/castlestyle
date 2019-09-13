@@ -5,11 +5,7 @@ class CastlesController < ApplicationController
 
   def show
     @castles = Castle.order("created_at DESC").page(params[:page]).per(4)
-    castle_ids = Castle.group(:siro_id).order('count_siro_id DESC').limit(5).count(:siro_id).keys
-    # @ranking = Castle.where(siro_id: castle_ids)
-    # @ranking = castle_ids
-    # binding.pry
-
+    @castle_ids = Castle.group(:siro_id).order('count_siro_id DESC').limit(5).count(:siro_id).keys
   end
 
   def new
