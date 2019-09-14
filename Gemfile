@@ -84,6 +84,7 @@ gem 'pry-byebug'
 gem 'jquery-rails'
 gem 'fog-aws'
 gem "aws-sdk-s3", require: false
+gem 'rspec-rails'
 
 group :production do
   gem 'unicorn', '5.4.1'
