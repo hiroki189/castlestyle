@@ -43,6 +43,7 @@ header{
         }
         .banner__search__form__field_input:focus{
           outline: 0;
+          border: 1px solid black;
         }
         &__submit{
           position: absolute;
