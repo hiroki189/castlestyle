@@ -44,6 +44,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+
 end
 
 group :development do
@@ -59,8 +60,8 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'webdrivers'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -84,7 +85,6 @@ gem 'pry-byebug'
 gem 'jquery-rails'
 gem 'fog-aws'
 gem "aws-sdk-s3", require: false
-gem 'rspec-rails'
 
 group :production do
   gem 'unicorn', '5.4.1'
