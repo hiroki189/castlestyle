@@ -235,16 +235,16 @@
       padding: 12px;
       position: relative;
       &__prevent{
-        &__input{
+        #modal__tab__search__prevent__input{
           background: #eeeeee;
           color: #4c4c4c;
           font-size: 14px;
           border: none;
           border-radius: 6px;
           padding: 12px;
-          width: 100%;
+          width: 98%;
         }
-        .modal__tab__search__prevent__input:focus{
+        #modal__tab__search__prevent__input:focus{
           outline: 0;
           border: 1px solid #9d0e12;
         }
@@ -284,3 +284,5 @@
 #modal__tab__result__collect__place__contain__select__action:focus{
   outline: 0;
 }
+
+
