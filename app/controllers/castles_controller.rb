@@ -11,6 +11,11 @@ class CastlesController < ApplicationController
   def new
     redirect_to new_user_session_path unless user_signed_in?
     @castle = Castle.new
+    @spots = Spot.where('name LIKE(?)', "%#{params[:keyword]}%")
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create
