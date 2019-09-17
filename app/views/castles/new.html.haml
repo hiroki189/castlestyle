@@ -64,12 +64,11 @@
           %input#modal__tab__search__prevent__input
       .modal__tab__result
         %ul.modal__tab__result__collect
-          - @spots.each do |spot|
-            %li.modal__tab__result__collect__place
-              .modal__tab__result__collect__place__contain
-                .modal__tab__result__collect__place__contain__name
-                  = spot.name
-                .modal__tab__result__collect__place__contain__select
-                  %button#modal__tab__result__collect__place__contain__select__action
-                    選択
-    
+          -# - @spots.each do |spot|
+          -#   %li.modal__tab__result__collect__place
+          -#     .modal__tab__result__collect__place__contain
+          -#       .modal__tab__result__collect__place__contain__name
+          -#         = spot.name
+          -#       .modal__tab__result__collect__place__contain__select
+          -#         %button#modal__tab__result__collect__place__contain__select__action
+          -#           選択
