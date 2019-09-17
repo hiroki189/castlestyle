@@ -256,15 +256,17 @@
         &__place{
           padding: 15px 0 15px 15px;
           border-bottom: 1px solid #eeeeee;
+          display: flex;
           &__contain{
-            width: 100%;
-            display: flex;
             &__name{
               line-height: 1.2;
               font-size: 15px;
+              width: 100%;
+              display: flex;
             }
             &__select{
               width: 50px;
+              float: right;
             }
           }
         }
@@ -277,9 +279,9 @@
   font-size: 13px;
   color: #9d0e12;
   border: 0;
-  position: absolute;
-  right: 30px;
   cursor: pointer;
+  width: 50px;
+  float: right;
 }
 #modal__tab__result__collect__place__contain__select__action:focus{
   outline: 0;
