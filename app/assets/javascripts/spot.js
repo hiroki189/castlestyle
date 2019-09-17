@@ -23,36 +23,16 @@ $(function(){
     search_list.append(html);
   }
 
-    // var spot_list = $('.style__photo__narrow__container__new__place__collection__container__name');
-
-    // function addSpot(spotId,spotName){
-    //   var html = `<li class="style__photo__narrow__container__new__place__collection" id=${spotId}>
-    //                 <tabble class="style__photo__narrow__container__new__place__collection__container">
-    //                   <div class="style__photo__narrow__container__new__place__collection__container__name">
-    //                     ${spotName}
-    //                   </div>
-    //                   <div class="style__photo__narrow__container__new__place__collection__container__action">
-    //                     <a class="style__photo__narrow__container__new__place__collection__container__action_delete" href="">
-    //                       削除
-    //                     </a>
-    //                   </div>
-    //                 </tabble>
-    //               </li>`
-    //   spot_list.append(html);
-    // }
-
-  
-  var spot_list = $('.style__photo__narrow__container__new__place');
-  function addSpot(spotId,spotName){
-    var html = `<li class="style__photo__narrow__container__new__place__collection">
-      <tabble class="style__photo__narrow__container__new__place__collection__container">
-        <div class="style__photo__narrow__container__new__place__collection__container__name">${spotName}</div>
-          <div class="style__photo__narrow__container__new__place__collection__container__action">
-          <a class="style__photo__narrow__container__new__place__collection__container__action_delete" href="">削除</a>
-        </div>
-      </tabble>
-    </li>`
-  }
+    var spot_list = $('.style__photo__narrow__container__new__place');
+    function addSpot(spotId,spotName){
+      var html = `<li class="style__photo__narrow__container__new__place__collection" id=${spotId}>
+                      <div class="style__photo__narrow__container__new__place__collection__container__name">
+                        ${spotName}
+                      </div>
+                      <div id="style__photo__narrow__container__new__place__collection__container__action_delete">削除</div>
+                  </>`
+      spot_list.prepend(html);
+    }
 
 
   $('#modal__tab__search__prevent__input').on("keyup", function(){
@@ -88,5 +68,10 @@ $(function(){
     $(this).parent().remove();
     $('#overlay, #modalWindow').fadeOut();
   });
+
+  $(".style__photo__narrow__container__new__place").on("click", "#style__photo__narrow__container__new__place__collection__container__action_delete", function(){
+    var spotId = $(this).data('spot-id')
+    $(this).parent(".style__photo__narrow__container__new__place__collection").remove();
+  })
 
 });
