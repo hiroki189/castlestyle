@@ -91,17 +91,19 @@
           &__place{
             &__collection{
               display: list-item;
+              padding: 8px 0 8px 12px;
+              height: 20px;
               border-bottom: 1px solid #eeeeee;
-              display: none;
               &__container{
                 width: 100%;
                 &__name{
                   line-height: 1.2;
                   font-size: 15px;
-                  margin: 12px 0 24px 0;
+                  float: left;
                 }
                 &__action{
-                  width: 50%;
+                  display: inline-flex;
+                  float: right;
                   &_delete{
                     font-size: 13px;
                     color: #9d0e12;
@@ -287,4 +289,17 @@
   outline: 0;
 }
 
+#style__photo__narrow__container__new__place__collection__container__action_delete{
+  font-size: 13px;
+  color: #9d0e12;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  float: right;
+}
+
+#style__photo__narrow__container__new__place__collection__container__action_delete:focus{
+  outline: 0;
+}
 
