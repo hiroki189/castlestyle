@@ -92,17 +92,18 @@
             &__collection{
               display: list-item;
               padding: 8px 0 8px 12px;
+              height: 20px;
               border-bottom: 1px solid #eeeeee;
-              display: none;
               &__container{
                 width: 100%;
                 &__name{
                   line-height: 1.2;
                   font-size: 15px;
-                  margin: 12px 0 24px 0;
+                  float: left;
                 }
                 &__action{
-                  width: 50%;
+                  display: inline-flex;
+                  float: right;
                   &_delete{
                     font-size: 13px;
                     color: #9d0e12;
@@ -125,6 +126,10 @@
                 margin: 0 auto;
                 display: block;
                 text-decoration: none;
+              }
+              #style__photo__narrow__container__new__place__field__add:focus{
+                outline: 0;
+                border: 1px solid black;
               }
             }
           }
@@ -175,3 +180,126 @@
   width: 100%;
   height: 465px;
 }
+
+#style__photo__narrow__container__new__place__field__add{
+  font-size: 12px;
+  width: 200px;
+  text-align: center;
+  color: #9d0e12;
+  border: 1px solid #9d0e12;
+  border-radius: 15px;
+  line-height: 30px;
+  margin: 0 auto;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#overlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  box-sizing: border-box;
+  background: #fff;
+  display: none;
+}
+
+#close{
+  position: absolute;
+  right: 12px;
+  top: 15px;
+  font-weight: normal;
+  font-size: 13px;
+  text-decoration: none;
+  color: #9d9d9d;
+  border: none;
+  cursor: pointer;
+}
+#close:focus{
+  outline: none;
+}
+
+.modal{
+  &__header{
+    color: #4c4c4c;
+    position: relative;
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #eeeeee;
+    padding: 12px 0;
+  }
+  &__tab{
+    &__search{
+      padding: 12px;
+      position: relative;
+      &__prevent{
+        #modal__tab__search__prevent__input{
+          background: #eeeeee;
+          color: #4c4c4c;
+          font-size: 14px;
+          border: none;
+          border-radius: 6px;
+          padding: 12px;
+          width: 98%;
+        }
+        #modal__tab__search__prevent__input:focus{
+          outline: 0;
+          border: 1px solid #9d0e12;
+        }
+      }
+    }
+    &__result{
+      &__collect{
+        box-sizing: border-box;
+        &__place{
+          padding: 15px 0 15px 15px;
+          border-bottom: 1px solid #eeeeee;
+          display: flex;
+          &__contain{
+            &__name{
+              line-height: 1.2;
+              font-size: 15px;
+              width: 100%;
+              display: flex;
+            }
+            &__select{
+              width: 50px;
+              float: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#modal__tab__result__collect__place__contain__select__action{
+  font-size: 13px;
+  color: #9d0e12;
+  border: 0;
+  cursor: pointer;
+  width: 50px;
+  float: right;
+}
+#modal__tab__result__collect__place__contain__select__action:focus{
+  outline: 0;
+}
+
+#style__photo__narrow__container__new__place__collection__container__action_delete{
+  font-size: 13px;
+  color: #9d0e12;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  float: right;
+}
+
+#style__photo__narrow__container__new__place__collection__container__action_delete:focus{
+  outline: 0;
+}
+

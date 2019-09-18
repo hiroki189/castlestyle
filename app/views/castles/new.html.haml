@@ -30,18 +30,11 @@
               3. スポット
               %hr.style__photo__narrow__container__new__heading__separator
             .style__photo__narrow__container__new__notice
-              庭園・山・門などの場所情報を追加できます。
+              庭園・山などの場所情報を追加できます。
             %ul.style__photo__narrow__container__new__place
-              %li.style__photo__narrow__container__new__place__collection
-                %tabble.style__photo__narrow__container__new__place__collection__container
-                  %tbody
-                    %tr
-                      %td.style__photo__narrow__container__new__place__collection__container__name
-                      %td.style__photo__narrow__container__new__place__collection__container__action
-                        = link_to "削除", "", class: "style__photo__narrow__container__new__place__collection__container__action_delete"
               .style__photo__narrow__container__new__place__field
-                = link_to "スポットを追加", "", class: "style__photo__narrow__container__new__place__field__add"
-
+                #style__photo__narrow__container__new__place__field__add
+                  スポットを追加
             %h2.style__photo__narrow__container__new__heading
               4.コメント
               %hr.style__photo__narrow__container__new__heading__separator
@@ -51,3 +44,16 @@
               =f.text_area :content, class: "style__photo__narrow__container__new__area__text"
             .style__photo__narrow__container__new__actions
               =f.submit "投稿",class: "style__photo__narrow__container__new__actions__primary"
+
+#overlay
+  .modal
+    .modal__header
+      スポットを検索
+      %button#close
+        閉じる
+    .modal__tab
+      .modal__tab__search
+        %label.modal__tab__search__prevent
+          %input#modal__tab__search__prevent__input
+      .modal__tab__result
+        %ul.modal__tab__result__collect
