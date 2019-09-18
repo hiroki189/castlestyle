@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2019_09_16_032639) do
     t.string "name"
     t.string "content", null: false
     t.integer "siro_id", null: false
-    t.integer "spot_id", null: false
+    t.integer "spot_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
