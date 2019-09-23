@@ -44,6 +44,9 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 
 end
 
@@ -61,6 +64,7 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'faker'
   # Easy installation and use of chromedriver to run system tests with Chrome
 end
 
@@ -85,6 +89,10 @@ gem 'pry-byebug'
 gem 'jquery-rails'
 gem 'fog-aws'
 gem "aws-sdk-s3", require: false
+gem 'public_suffix', '2.0.2'
+gem 'childprocess', '0.5'
+gem 'haml', '4.0'
+gem 'excon', '0.58'
 
 group :production do
   gem 'unicorn', '5.4.1'
