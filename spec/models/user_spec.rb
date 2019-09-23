@@ -39,8 +39,17 @@ describe User do
       expect(another_user.errors[:email]).to include("はすでに存在します")
      end
 
+     it "is invalid a password that has more than 6 characters" do
+      user = build(:user, password: "000000")
+      user.valid?
+      expect(user).to be_valid
+     end
+
      it "is invalid with a password which has less than 5 characters" do
-      
+      user = create(:user, password: "11111")
+      user.valid?
+      expect(user.errors[:password]).to include("Passwordは6文字以上で入力してください")
+     end
 
   end
 end
