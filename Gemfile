@@ -93,6 +93,8 @@ gem 'public_suffix', '2.0.2'
 gem 'childprocess', '0.5'
 gem 'haml', '4.0'
 gem 'excon', '0.58'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :production do
   gem 'unicorn', '5.4.1'
