@@ -1,6 +1,7 @@
 class CastlesController < ApplicationController
   def index
     @castles = Castle.order('id ASC').limit(6)
+
   end
 
   def show
@@ -19,8 +20,14 @@ class CastlesController < ApplicationController
   end
 
   def create
-    Castle.create(castle_params)
-    redirect_to controller: :castles, action: :index
+    @castles = Castle.create(castle_params)
+      if @castles.save()
+        flash[:notice] = "投稿が完了しました"
+        redirect_to controller: :castles, action: :index
+      else
+        flash[:alert] = "投稿に失敗しました"
+        redirect_to controller: :castles, action: :index
+      end
   end
 
   private
