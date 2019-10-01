@@ -1,7 +1,6 @@
 class CastlesController < ApplicationController
   def index
     @castles = Castle.order('id ASC').limit(6)
-
   end
 
   def show
