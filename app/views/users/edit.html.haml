@@ -1,0 +1,19 @@
+%header
+  .banner
+    = render "castles/header"
+
+.edit
+  .edit__container
+    %h2.edit__container__heading
+      プロフィール編集
+      %hr.container__heading_separator
+    
+    .edit__container__compliation
+      = form_for(current_user) do |f|
+        .edit__container__compliation__field
+          .edit__container__compliation__field__label
+            = f.label :ユーザー名, class: "edit__container__compliation__field__label__user"
+          .edit__container__compliation__field__input
+            = f.text_field :name, autofocus: true , class: "edit__container__compliation__field__input__imya"
+        .edit__container__compliation__actions
+          = f.submit "保存", class: "edit__container__compliation__actions__btn"
