@@ -256,6 +256,8 @@
     &__result{
       &__collect{
         box-sizing: border-box;
+        height: 100vh;
+        overflow: scroll;
         &__place{
           padding: 15px 0 15px 15px;
           border-bottom: 1px solid #eeeeee;
