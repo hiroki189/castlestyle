@@ -169,6 +169,7 @@
               line-height: 44px;
               margin: 0 auto;
               display: block;
+              cursor: pointer;
             }
           }
         }
@@ -303,3 +304,6 @@
   outline: 0;
 }
 
+.style__photo__narrow__container__new__actions__primary:focus{
+  outline: 0;
+}
