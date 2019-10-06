@@ -10,7 +10,7 @@
         %i.fas.fa-user.mypage__narrow__profile__image__img
       .mypage__narrow__profile__name
         = current_user.name
-      = link_to "", class: "mypage__narrow__profile__mini mypage__narrow__profile__secondary" do
+      = link_to edit_user_path(current_user.id) , class: "mypage__narrow__profile__mini mypage__narrow__profile__secondary" do
         プロフィール編集
       .mypage__narrow__profile__list
         = link_to destroy_user_session_path, method: :delete, class: "mypage__narrow__profile__list__logout " do

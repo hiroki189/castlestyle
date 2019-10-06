@@ -169,6 +169,7 @@
               line-height: 44px;
               margin: 0 auto;
               display: block;
+              cursor: pointer;
             }
           }
         }
@@ -255,6 +256,8 @@
     &__result{
       &__collect{
         box-sizing: border-box;
+        height: 100vh;
+        overflow: scroll;
         &__place{
           padding: 15px 0 15px 15px;
           border-bottom: 1px solid #eeeeee;
@@ -303,3 +306,6 @@
   outline: 0;
 }
 
+.style__photo__narrow__container__new__actions__primary:focus{
+  outline: 0;
+}
