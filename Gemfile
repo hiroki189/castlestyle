@@ -92,7 +92,7 @@ gem "aws-sdk-s3", require: false
 gem 'public_suffix', '2.0.2'
 gem 'childprocess', '0.5'
 gem 'haml', '4.0'
-gem 'excon', '0.58'
+gem 'excon', '0.71.0'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
